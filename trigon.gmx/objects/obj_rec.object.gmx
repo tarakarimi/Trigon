@@ -122,6 +122,7 @@ if y-30 &gt; room_height
             <string>///collision
 
     if (global.tc %3 == 1 ) &amp;&amp; (spr == spr_b){ //blue
+    audio_play_sound(s1,0.8,0)
     instance_destroy()
     b_sparkle(obj_triangle.x, y)
     b_rec(obj_triangle.x-130,y)
@@ -129,6 +130,7 @@ if y-30 &gt; room_height
     score += 100
     }
     else if (global.tc %3 == 2) &amp;&amp; (spr == spr_g){  //green
+    audio_play_sound(s2,0.8,0)
     instance_destroy()
     g_sparkle(obj_triangle.x, y)
     g_rec(obj_triangle.x-130,y)
@@ -136,6 +138,7 @@ if y-30 &gt; room_height
     score += 100
     }
     else if (global.tc %3 == 0) &amp;&amp; (spr == spr_y){  //yellow
+    audio_play_sound(s3,0.8,0)
     instance_destroy()
     y_sparkle(obj_triangle.x, y)
     y_rec(obj_triangle.x-130,y)

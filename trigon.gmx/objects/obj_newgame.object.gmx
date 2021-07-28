@@ -173,7 +173,7 @@ alarm[1] = 1
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>soundtrack</sound>
+            <sound>main</sound>
           </argument>
           <argument>
             <kind>3</kind>

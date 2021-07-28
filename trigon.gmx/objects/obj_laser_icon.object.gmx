@@ -34,6 +34,8 @@ ltotal_time = room_speed * 5
 ltime = 0
 lspeed = 20
 spawn_inc_holder = 0
+global.laserkey = false
+backspeed_holder = 0
 
 </string>
           </argument>
@@ -63,6 +65,7 @@ if ltime &lt; ltotal_time {
     //show_debug_message(string(ltime))
     instance_create(obj_triangle.x, obj_triangle.y-30, obj_laser)
     alarm[1] = 1
+    global.laserkey = false
 }    
 else {
     ltime = 0
@@ -95,6 +98,7 @@ else {
           <argument>
             <kind>1</kind>
             <string>if global.laserpoint&gt;=3 {
+    global.laserkey = true
     //laser = ON
     alarm[1] = 1
     global.laserpoint -= 3
@@ -105,6 +109,7 @@ else {
     spawn_inc_holder = obj_gc.spawn_inc
     obj_gc.spawn_inc = 4
 }
+
 </string>
           </argument>
         </arguments>

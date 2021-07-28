@@ -112,14 +112,17 @@ if y - 20 &gt; room_height
     if (global.tc %3 == 1 ) &amp;&amp; (spr == spr_laser_point_b){ //blue
     instance_destroy()
     global.laserpoint += 1
+    audio_play_sound(collect_item,0.8,0)
     }
     else if (global.tc %3 == 2) &amp;&amp; (spr == spr_laser_point_g){  //green
     instance_destroy()
     global.laserpoint += 1
+    audio_play_sound(collect_item,0.8,0)
     }
     else if (global.tc %3 == 0) &amp;&amp; (spr == spr_laser_point_y){  //yellow
     instance_destroy()
     global.laserpoint += 1
+    audio_play_sound(collect_item,0.8,0)
     }
 
 </string>

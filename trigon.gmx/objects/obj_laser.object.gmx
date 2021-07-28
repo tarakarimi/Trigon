@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spd = 10
+            <string>spd = 8
 </string>
           </argument>
         </arguments>
@@ -77,6 +77,7 @@ if y&lt;=0 {
           <argument>
             <kind>1</kind>
             <string>///collision
+audio_play_sound(s5,0.8,0)
     if (obj_rec.spr == spr_b){ //blue
     instance_destroy(other)
     b_sparkle(x, y)

@@ -6,8 +6,16 @@
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="group">
-      <sound>sound\soundtrack</sound>
+      <sound>sound\main</sound>
       <sound>sound\sound1</sound>
+      <sound>sound\collect_item</sound>
+    </sounds>
+    <sounds name="shatterings">
+      <sound>sound\s1</sound>
+      <sound>sound\s2</sound>
+      <sound>sound\s3</sound>
+      <sound>sound\s4</sound>
+      <sound>sound\s5</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -110,8 +118,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\room1</room>
+    <room>rooms\room0</room>
     <room>rooms\room2</room>
   </rooms>
   <help>

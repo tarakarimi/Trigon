@@ -54,7 +54,7 @@ report = "YOU SCORED"
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>soundtrack</sound>
+            <sound>main</sound>
           </argument>
         </arguments>
       </action>

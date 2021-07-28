@@ -130,7 +130,10 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 1
+            <string>if global.laserkey == true
+    alarm[0] = 0
+else 
+    alarm[0] = 1
 //curr_rot -= 120
 //tc += 1
 
