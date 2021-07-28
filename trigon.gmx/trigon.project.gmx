@@ -25,6 +25,9 @@
     <sprite>sprites\spr_laser</sprite>
     <sprite>sprites\spr_bg</sprite>
     <sprite>sprites\spr_bg2</sprite>
+    <sprite>sprites\spr_laser_point_y</sprite>
+    <sprite>sprites\spr_laser_point_g</sprite>
+    <sprite>sprites\spr_laser_point_b</sprite>
     <sprite>sprites\spr_laser_point</sprite>
     <sprite>sprites\spr_laser_pixel</sprite>
   </sprites>
@@ -78,16 +81,15 @@
     <font>fonts\fnt_eng</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_laser_icon</object>
     <object>objects\obj_gc</object>
     <object>objects\obj_triangle</object>
     <object>objects\obj_rec</object>
     <object>objects\obj_tri_logo</object>
     <object>objects\obj_laser</object>
-    <object>objects\obj_laser2</object>
     <object>objects\obj_laser_point</object>
     <object>objects\obj_crown</object>
     <object>objects\laser_point_logo</object>
-    <object>objects\obj_laser_icon</object>
     <object>objects\obj_logo</object>
     <object>objects\obj_crown_logo</object>
     <object>objects\obj_newgame</object>
@@ -108,8 +110,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
     <room>rooms\room2</room>
   </rooms>
   <help>
