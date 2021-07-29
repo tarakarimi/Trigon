@@ -102,7 +102,7 @@ yellow = 3
           <argument>
             <kind>1</kind>
             <string>///laser on
-
+//show_debug_message(curr_rot)
 if (global.laserpoint &gt;= 3)
     global.lalpha = 2
 
@@ -130,7 +130,7 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.laserkey == true
+            <string>if global.laserkey == true //|| global.menukey = true
     alarm[0] = 0
 else 
     alarm[0] = 1

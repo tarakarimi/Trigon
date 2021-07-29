@@ -38,6 +38,8 @@
     <sprite>sprites\spr_laser_point_b</sprite>
     <sprite>sprites\spr_laser_point</sprite>
     <sprite>sprites\spr_laser_pixel</sprite>
+    <sprite>sprites\life</sprite>
+    <sprite>sprites\spr_pause</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg</background>
@@ -101,7 +103,7 @@
     <object>objects\obj_logo</object>
     <object>objects\obj_crown_logo</object>
     <object>objects\obj_newgame</object>
-    <object>objects\obj_menu</object>
+    <object>objects\obj_pause</object>
     <objects name="last room">
       <object>objects\obj_gameover</object>
       <object>objects\obj_again</object>
@@ -116,10 +118,12 @@
       <object>objects\obj_y_rec</object>
       <object>objects\obj_b_rec</object>
     </objects>
+    <object>objects\o_heart</object>
+    <object>objects\obj_menu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
     <room>rooms\room2</room>
   </rooms>
   <help>
