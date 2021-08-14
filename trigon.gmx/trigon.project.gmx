@@ -40,6 +40,12 @@
     <sprite>sprites\spr_laser_pixel</sprite>
     <sprite>sprites\life</sprite>
     <sprite>sprites\spr_pause</sprite>
+    <sprite>sprites\s_brec_left</sprite>
+    <sprite>sprites\s_yrec_left</sprite>
+    <sprite>sprites\s_yrec_right</sprite>
+    <sprite>sprites\s_brec_right</sprite>
+    <sprite>sprites\s_grec_left</sprite>
+    <sprite>sprites\s_grec_right</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg</background>
@@ -82,9 +88,6 @@
     <script>scripts\b_sparkle.gml</script>
     <script>scripts\rotate_toward.gml</script>
     <script>scripts\g_sparkle.gml</script>
-    <script>scripts\g_rec.gml</script>
-    <script>scripts\y_rec.gml</script>
-    <script>scripts\b_rec.gml</script>
     <script>scripts\laser.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -113,17 +116,20 @@
       <object>objects\obj_b_sparkle</object>
       <object>objects\obj_g_sparkle</object>
     </objects>
-    <objects name="rec reck">
-      <object>objects\obj_g_rec</object>
-      <object>objects\obj_y_rec</object>
-      <object>objects\obj_b_rec</object>
-    </objects>
     <object>objects\o_heart</object>
     <object>objects\obj_menu</object>
+    <objects name="recs">
+      <object>objects\o_yrec_left</object>
+      <object>objects\o_grec_left</object>
+      <object>objects\o_brec_left</object>
+      <object>objects\o_yrec_right</object>
+      <object>objects\o_grec_right</object>
+      <object>objects\o_brec_right</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\room1</room>
+    <room>rooms\room0</room>
     <room>rooms\room2</room>
   </rooms>
   <help>

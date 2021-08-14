@@ -67,7 +67,7 @@ yy = 0
           <argument>
             <kind>1</kind>
             <string>show_debug_message("destroyed")
-part_emitter_destroy(Sname,emmiter1)
+part_emitter_destroy(Sname,emitter1)
 part_system_destroy(Sname)
 </string>
           </argument>

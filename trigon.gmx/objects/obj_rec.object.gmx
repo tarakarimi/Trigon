@@ -41,9 +41,9 @@ else if col == 2
 else if col == 1
     spr = spr_y
   
-rot = irandom_range(-12, 12)
+//rot = irandom_range(-12, 12)
 global.score_count = 0
-//rot = 0
+rot = 0
 
 </string>
           </argument>
@@ -125,24 +125,30 @@ if y-30 &gt; room_height
     audio_play_sound(s1,0.8,0)
     instance_destroy()
     b_sparkle(obj_triangle.x, y)
-    b_rec(obj_triangle.x-130,y)
-    b_rec(obj_triangle.x+130,y)
+	   instance_create(room_width/4, y, o_brec_left)
+	   instance_create(3/4*room_width, y, o_brec_right)
+    //b_rec(obj_triangle.x-130,y)
+    //b_rec(obj_triangle.x+130,y)
     score += 100
     }
     else if (global.tc %3 == 2) &amp;&amp; (spr == spr_g){  //green
     audio_play_sound(s2,0.8,0)
     instance_destroy()
     g_sparkle(obj_triangle.x, y)
-    g_rec(obj_triangle.x-130,y)
-    g_rec(obj_triangle.x+130,y)
+    instance_create(room_width/4 , y, o_grec_left)
+	   instance_create(3/4*room_width , y, o_grec_right)
+    //g_rec(obj_triangle.x-130,y)
+    //g_rec(obj_triangle.x+130,y)
     score += 100
     }
     else if (global.tc %3 == 0) &amp;&amp; (spr == spr_y){  //yellow
     audio_play_sound(s3,0.8,0)
     instance_destroy()
     y_sparkle(obj_triangle.x, y)
-    y_rec(obj_triangle.x-130,y)
-    y_rec(obj_triangle.x+130,y)
+	   instance_create(room_width/4, y, o_yrec_left)
+	   instance_create(3/4*room_width, y, o_yrec_right)
+    //y_rec(obj_triangle.x-130,y)
+    //y_rec(obj_triangle.x+130,y)
     score += 100
     }
     else
@@ -164,28 +170,6 @@ if place_meeting(x,y+11, obj_rec)
     instance_destroy()
 }
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="53">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>

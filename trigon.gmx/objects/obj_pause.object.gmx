@@ -80,6 +80,42 @@ global.pausekey = false
           <argument>
             <kind>1</kind>
             <string>paused = !paused;
+global.pausekey = true 
+    if paused == true {
+        audio_pause_all()
+        instance_deactivate_all(true);
+        //instance_deactivate_object(obj_triangle)
+        alarm[0] = 1
+        backspeed_holder = background_vspeed
+        background_vspeed = 0 
+part_system_automatic_update(obj_b_sparkle, false)
+part_system_automatic_update(obj_g_sparkle, false)
+part_system_automatic_update(obj_y_sparkle, false)
+
+//part_system_automatic_update(obj_b_rec, false)
+//part_system_automatic_update(obj_g_rec, false)
+//part_system_automatic_update(obj_y_rec, false)
+    }  
+
+
+    else {
+        instance_activate_all();
+        surface_free(paused_surf);
+        paused_surf = -1
+        background_vspeed = backspeed_holder
+        audio_resume_all()
+        alarm[0] = 0
+global.pausekey = false
+part_system_automatic_update(obj_b_sparkle.Sname, true)
+part_system_automatic_update(obj_g_sparkle.Sname, true)
+part_system_automatic_update(obj_y_sparkle.Sname, true)
+
+//part_system_automatic_update(obj_b_rec.Sname, true)
+//part_system_automatic_update(obj_g_rec.Sname, true)
+//part_system_automatic_update(obj_y_rec.Sname, true)
+    }
+
+/*paused = !paused;
 
 
     if paused == true {

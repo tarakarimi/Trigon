@@ -29,10 +29,6 @@
 instance_create(0,0,obj_b_sparkle)
 instance_create(0,0,obj_g_sparkle)
 
-instance_create(0,0,obj_g_rec)
-instance_create(0,0,obj_b_rec)
-instance_create(0,0,obj_y_rec)
-
 instance_create(0, 0, obj_laser)
 instance_create(0,0,obj_g_sparkle)
 //instance_create(obj_triangle.x, obj_triangle.y, obj_triangle)
