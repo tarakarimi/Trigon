@@ -6,13 +6,13 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>50</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code></code>
-  <enableViews>0</enableViews>
-  <clearViewBackground>-1</clearViewBackground>
+  <enableViews>-1</enableViews>
+  <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>0</isSet>
@@ -31,7 +31,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bg" x="0" y="0" htiled="-1" vtiled="-1" hspeed="1" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="3" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="570" hview="950" xport="0" yport="0" wport="570" hport="950" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -51,10 +51,12 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_newgame" x="288" y="448" name="inst_8653A02C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_logo" x="275" y="160" name="inst_93C574B1" locked="0" code="" scaleX="0.984822928905487" scaleY="1.07142853736877" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tri_logo" x="285" y="880" name="inst_18C640F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_crown_logo" x="245" y="73" name="inst_9008D60E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_gc" x="0" y="0" name="inst_18218D58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_triangle" x="285" y="850" name="inst_6A40D362" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crown" x="245" y="0" name="inst_934FF96E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laser_icon" x="512" y="864" name="inst_CB53E574" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="laser_point_logo" x="530" y="35" name="inst_9B3AF810" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pause" x="-192" y="-32" name="inst_1C081F42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

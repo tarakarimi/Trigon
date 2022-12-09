@@ -20,7 +20,6 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_triangle</sprite>
-    <sprite>sprites\spr_tri_logo</sprite>
     <sprite>sprites\spr_y</sprite>
     <sprite>sprites\spr_g</sprite>
     <sprite>sprites\spr_b</sprite>
@@ -29,23 +28,27 @@
     <sprite>sprites\spr_newgame</sprite>
     <sprite>sprites\spr_game_over</sprite>
     <sprite>sprites\spr_again</sprite>
-    <sprite>sprites\spr_logo</sprite>
     <sprite>sprites\spr_laser</sprite>
     <sprite>sprites\spr_bg</sprite>
     <sprite>sprites\spr_bg2</sprite>
-    <sprite>sprites\spr_laser_point_y</sprite>
-    <sprite>sprites\spr_laser_point_g</sprite>
-    <sprite>sprites\spr_laser_point_b</sprite>
-    <sprite>sprites\spr_laser_point</sprite>
     <sprite>sprites\spr_laser_pixel</sprite>
     <sprite>sprites\life</sprite>
     <sprite>sprites\spr_pause</sprite>
-    <sprite>sprites\s_brec_left</sprite>
-    <sprite>sprites\s_yrec_left</sprite>
-    <sprite>sprites\s_yrec_right</sprite>
-    <sprite>sprites\s_brec_right</sprite>
-    <sprite>sprites\s_grec_left</sprite>
-    <sprite>sprites\s_grec_right</sprite>
+    <sprites name="Menu">
+      <sprite>sprites\spr_tri_logo</sprite>
+      <sprite>sprites\spr_logo</sprite>
+    </sprites>
+    <sprites name="collect items">
+      <sprite>sprites\spr_laser_point_y</sprite>
+      <sprite>sprites\spr_laser_point_b</sprite>
+      <sprite>sprites\spr_laser_point</sprite>
+      <sprite>sprites\spr_laser_point_g</sprite>
+    </sprites>
+    <sprites name="Rectangle pieces">
+      <sprite>sprites\spr_green_piece</sprite>
+      <sprite>sprites\spr_blue_piece</sprite>
+      <sprite>sprites\spr_yellow_piece</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg</background>
@@ -89,6 +92,7 @@
     <script>scripts\rotate_toward.gml</script>
     <script>scripts\g_sparkle.gml</script>
     <script>scripts\laser.gml</script>
+    <script>scripts\breaking_actions.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_eng</font>
@@ -119,19 +123,21 @@
     <object>objects\o_heart</object>
     <object>objects\obj_menu</object>
     <objects name="recs">
-      <object>objects\o_yrec_left</object>
-      <object>objects\o_grec_left</object>
-      <object>objects\o_brec_left</object>
-      <object>objects\o_yrec_right</object>
-      <object>objects\o_grec_right</object>
-      <object>objects\o_brec_right</object>
+      <object>objects\obj_piece_left</object>
+      <object>objects\obj_piece_right</object>
     </objects>
+    <object>objects\obj_sparkle</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
-    <room>rooms\room0</room>
-    <room>rooms\room2</room>
+    <room>rooms\room_menu</room>
+    <room>rooms\room_game</room>
+    <room>rooms\room_gameover</room>
   </rooms>
+  <constants number="3">
+    <constant name="YELLOW">0</constant>
+    <constant name="BLUE">1</constant>
+    <constant name="GREEN">2</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

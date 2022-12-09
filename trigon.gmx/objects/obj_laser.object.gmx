@@ -48,11 +48,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y -= spd
+            <string>///Move + destruction
 
-if y&lt;=5 {
+y -= spd
+if y&lt;= view_yview[0]-30 {
     instance_destroy()
-    //show_debug_message("d")
 }
 </string>
           </argument>

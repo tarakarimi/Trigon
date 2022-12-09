@@ -25,26 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sc = 1
-global.tc = 1
+            <string>///Inito
+sc = 1
 rot = -120
 start_rot = 0
 curr_rot = start_rot
 end_rot = -120
 total_time = room_speed/15
 time = 0
+global.tc = 1
+
 alarm[0] = 1
-
-/*
-blue = 1
-green = 2
-yellow = 3
-
-
-
-
-
-
 </string>
           </argument>
         </arguments>
@@ -67,7 +58,8 @@ yellow = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if time&lt;total_time {
+            <string>///rotation
+if time&lt;total_time {
     curr_rot = ease_linear(start_rot,end_rot,time,total_time)
     time += 1
     alarm[0] = 1
@@ -79,35 +71,6 @@ yellow = 3
     start_rot += rot
     end_rot += rot
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///laser on
-//show_debug_message(curr_rot)
-if (global.laserpoint &gt;= 3)
-    global.lalpha = 2
-
-else
-    global.lalpha = 0.2
 </string>
           </argument>
         </arguments>
@@ -130,14 +93,10 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.laserkey == true //|| global.menukey = true
-    alarm[0] = 0
-else 
+            <string>///enable rotation
+if !global.laserkey {
     alarm[0] = 1
-//curr_rot -= 120
-//tc += 1
-
-
+}
 
 </string>
           </argument>
@@ -162,7 +121,6 @@ else
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(spr_triangle, 0, x, y, sc, sc, curr_rot, c_white, 1)
-
 </string>
           </argument>
         </arguments>
