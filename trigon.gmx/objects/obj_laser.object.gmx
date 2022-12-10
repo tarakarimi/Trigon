@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spd = 12
+            <string>///inito
+r = 10
+spd = 12
 </string>
           </argument>
         </arguments>
@@ -58,8 +60,6 @@ if y&lt;= view_yview[0]-30 {
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="4" ename="obj_rec">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -76,35 +76,30 @@ if y&lt;= view_yview[0]-30 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///collision
-audio_play_sound(s5,0.8,0)
-    if (obj_rec.spr == spr_b){ //blue
-    instance_destroy(other)
-    b_sparkle(x, y)
-	instance_create(room_width/4, y, o_brec_left)
-	instance_create(3/4*room_width, y, o_brec_right)
-    //b_rec(x-130,y)
-    //b_rec(x+130,y)
-    score += 100
+            <string>///collision with rectangles
+col = collision_circle(x,y,r,obj_rec,false,true)
+if col != noone {
+    color = col.color  
+    sparkle(x, y, color)   
+    switch(color){
+        case GREEN:
+        select_spr = spr_green_piece
+        break;
+        case BLUE:
+        select_spr = spr_blue_piece
+        break;
+        case YELLOW:
+        select_spr = spr_yellow_piece 
+        break;
     }
-    else if (obj_rec.spr == spr_g){  //green
-    instance_destroy(other)
-    g_sparkle(x, y)
-	instance_create(room_width/4, y, o_grec_left)
-	instance_create(3/4*room_width, y, o_grec_right)
-    //g_rec(x-130,y)
-    //g_rec(x+130,y)
+    left = instance_create(view_xview[0]+view_wview[0]*3/4, y, obj_piece_left)
+    left.spr = select_spr
+    right = instance_create(view_xview[0]+view_wview[0]*1/4, y, obj_piece_right)
+    right.spr = select_spr
+    audio_play_sound(s5,0.8,0)
     score += 100
-    }
-    else if (obj_rec.spr == spr_y){  //yellow
-    instance_destroy(other)
-    y_sparkle(x, y)
-	instance_create(room_width/4, y, o_yrec_left)
-	instance_create(3/4*room_width, y, o_yrec_right)
-    //y_rec(x-130,y)
-    //y_rec(x+130,y)
-    score += 100
-    }
+    instance_destroy(col)
+}
 </string>
           </argument>
         </arguments>

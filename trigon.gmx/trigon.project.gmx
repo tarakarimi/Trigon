@@ -32,7 +32,6 @@
     <sprite>sprites\spr_bg</sprite>
     <sprite>sprites\spr_bg2</sprite>
     <sprite>sprites\spr_laser_pixel</sprite>
-    <sprite>sprites\life</sprite>
     <sprite>sprites\spr_pause</sprite>
     <sprites name="Menu">
       <sprite>sprites\spr_tri_logo</sprite>
@@ -93,20 +92,23 @@
     <script>scripts\g_sparkle.gml</script>
     <script>scripts\laser.gml</script>
     <script>scripts\breaking_actions.gml</script>
+    <script>scripts\scale_canvas.gml</script>
+    <script>scripts\get_hh.gml</script>
+    <script>scripts\sparkle.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_eng</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_laser_icon</object>
+    <object>objects\obj_menu_ctrlr</object>
     <object>objects\obj_gc</object>
+    <object>objects\obj_laser_icon</object>
     <object>objects\obj_triangle</object>
     <object>objects\obj_rec</object>
     <object>objects\obj_tri_logo</object>
     <object>objects\obj_laser</object>
     <object>objects\obj_laser_point</object>
-    <object>objects\obj_crown</object>
-    <object>objects\laser_point_logo</object>
+    <object>objects\obj_laser_point_logo</object>
     <object>objects\obj_logo</object>
     <object>objects\obj_crown_logo</object>
     <object>objects\obj_newgame</object>
@@ -115,18 +117,12 @@
       <object>objects\obj_gameover</object>
       <object>objects\obj_again</object>
     </objects>
-    <objects name="spark">
-      <object>objects\obj_y_sparkle</object>
-      <object>objects\obj_b_sparkle</object>
-      <object>objects\obj_g_sparkle</object>
-    </objects>
-    <object>objects\o_heart</object>
     <object>objects\obj_menu</object>
     <objects name="recs">
       <object>objects\obj_piece_left</object>
       <object>objects\obj_piece_right</object>
     </objects>
-    <object>objects\obj_sparkle</object>
+    <object>objects\obj_particle_manager</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>

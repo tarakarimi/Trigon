@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,13 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Inito
-spr = spr_tri_logo
-start_sc = 1
-curr_sc = start_sc
-end_sc = 0.42
-total_time = room_speed
-time = 0
+            <string>///particle base
+Sname = part_system_create()
+particle1 = part_type_create();
+part_type_shape(particle1,pt_shape_disk);
+part_type_size(particle1,0.10,0.15,0,0);
+part_type_scale(particle1,1,1);
+part_type_color1(particle1,noone);
+part_type_alpha1(particle1,1);
+part_type_speed(particle1,2,7,0,0);
+part_type_direction(particle1,-50,230,0,0);
+part_type_gravity(particle1,0.3,270);
+part_type_orientation(particle1,0,0,0,0,1);
+part_type_blend(particle1,0);
+part_type_life(particle1,20,60);
+emitter1 = part_emitter_create(Sname);
+
+xx = 0
+yy = 0
 
 
 </string>
@@ -39,7 +50,7 @@ time = 0
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -56,25 +67,15 @@ time = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///shrink
-if time&lt;total_time {
-    curr_sc = ease_linear(start_sc,end_sc,time,total_time)
-    time += 1
-    alarm[0] = 1
-} else {
-    curr_sc = end_sc
-    time = 0
-    alarm[0] = 0
-    global.started = true
-    room_goto(room_game)
-}
-
+            <string>show_debug_message("destroyed")
+part_emitter_destroy(Sname,emitter1)
+part_system_destroy(Sname)
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -91,7 +92,8 @@ if time&lt;total_time {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_tri_logo, 0, x, y, curr_sc, curr_sc, 0, c_white, 1)
+            <string>part_emitter_region(Sname,emitter1,xx,xx,yy,yy,ps_shape_ellipse,1);
+part_emitter_burst(Sname,emitter1,particle1,50);
 </string>
           </argument>
         </arguments>

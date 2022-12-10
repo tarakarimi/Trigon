@@ -52,11 +52,6 @@
   </views>
   <instances>
     <instance objName="obj_gc" x="0" y="0" name="inst_18218D58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_triangle" x="285" y="850" name="inst_6A40D362" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_crown" x="245" y="0" name="inst_934FF96E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_laser_icon" x="512" y="864" name="inst_CB53E574" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="laser_point_logo" x="530" y="35" name="inst_9B3AF810" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pause" x="-192" y="-32" name="inst_1C081F42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,20 +26,19 @@
           <argument>
             <kind>1</kind>
             <string>///Inito
-spr = spr_tri_logo
-start_sc = 1
-curr_sc = start_sc
-end_sc = 0.42
-total_time = room_speed
-time = 0
-
-
+global.started = false
+event_perform(ev_other,ev_user0)
+center_x = view_xview[0]+view_wview[0]/2
+trigon_logo = instance_create(center_x,get_hh()-80,obj_tri_logo)
+logo = instance_create(center_x,view_yview[0]+150,obj_logo)
+crown = instance_create(center_x,view_yview[0]+70,obj_crown_logo)
+start = instance_create(center_x,view_yview[0]+get_hh()/2,obj_newgame)
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -56,42 +55,62 @@ time = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///shrink
-if time&lt;total_time {
-    curr_sc = ease_linear(start_sc,end_sc,time,total_time)
-    time += 1
-    alarm[0] = 1
-} else {
-    curr_sc = end_sc
-    time = 0
-    alarm[0] = 0
-    global.started = true
-    room_goto(room_game)
+            <string>///html5 origins
+///ORG
+global.org_w = 570
+global.org_h = 800
+
+
+/*if os_type != os_browser{
+    global.g_vh = view_hview[0]
+    global.g_vw = view_wview[0]
+    return 1
+}*/
+d_w = browser_width
+d_h = browser_height
+global.org_w = global.org_w
+global.org_h = (d_h / d_w) * global.org_w
+//application_surface_enable(false)
+
+base_width = 570;
+base_height = global.org_h//800;
+view_wview[0] = base_width
+view_hview[0] = base_height
+global.g_vh = base_height
+global.g_vw = base_width
+//show_debug_message("H:" + string(get_view_height()))
+//show_debug_message("W:" + string(get_view_width()))
+width = base_width;
+height = (base_height/base_width)*base_width //base_height;
+
+if (browser_width != width || browser_height != height)
+{
+    width = min(base_width, browser_width);
+    height =  min(base_height, browser_height);
+    scale_canvas(base_width, base_height, width, height, true);
 }
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_sprite_ext(spr_tri_logo, 0, x, y, curr_sc, curr_sc, 0, c_white, 1)
+//alarm[0] = 1
+/*
+base_width = 570
+base_height = (browser_height / browser_width) * base_width
+view_wview[0] = base_width
+view_hview[0] = base_height
+show_debug_message("H:" + string(base_height))
+show_debug_message("W:" + string(base_width))
+width = base_width;
+height = (base_height/base_width)*base_width
+if (browser_width != width || browser_height != height)
+{
+    width = min(base_width, browser_width);
+    height =  min(base_height, browser_height);
+    scale_canvas(base_width, base_height, width, height, true);
+}
+/*if os_type != os_browser{
+    global.g_vh = view_hview[0]
+    global.g_vw = view_wview[0]
+    return 1
+}*/
+//global.get_height = height
 </string>
           </argument>
         </arguments>

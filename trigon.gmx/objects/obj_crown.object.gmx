@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_crown</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,10 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>score = 0
-fnt_sc = 0.35
-score_height = 60
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

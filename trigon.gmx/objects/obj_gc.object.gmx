@@ -32,22 +32,27 @@ spawn_inc = 2
 hp = 3
 spawn_x= view_xview[0]+view_wview[0]/2
 spawn_y = view_yview[0]-40
+speed_inc = room_speed * 10
+score = 0
+fnt_sc = 0.35
+score_height = 70
+center_x = view_xview[0]+view_wview[0]/2
 
-instance_create(0,0,obj_y_sparkle)
-instance_create(0,0,obj_b_sparkle)
-instance_create(0,0,obj_g_sparkle)
+instance_create(0,0,obj_particle_manager)
 instance_create(0, 0, obj_laser)
-instance_create(0,0,obj_g_sparkle)
-instance_create(obj_crown.x, obj_crown.y, obj_crown)
+instance_create(center_x,get_hh()-100,obj_triangle)
+instance_create(view_xview[0]+view_wview[0]-80,get_hh()-100,obj_laser_icon)
+instance_create(view_xview[0]+view_wview[0]-50,view_yview[0]+80,obj_laser_point_logo)
+instance_create(view_xview[0]+50,view_yview[0]+80,obj_pause)
 
 alarm[0] = room_speed
-alarm[2] = 1
+alarm[1] = 1
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="2">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -65,11 +70,11 @@ alarm[2] = 1
           <argument>
             <kind>1</kind>
             <string>///speed up lvl design
-speed_inc = room_speed * 10
-spawn_inc += 0.15
-speeder += 0.2
-
-alarm[2] = speed_inc
+if speeder &lt; 8 {
+    spawn_inc += 0.15
+    speeder += 0.2
+    alarm[1] = speed_inc
+}
 </string>
           </argument>
         </arguments>
@@ -100,9 +105,37 @@ if coin &lt; 10 {
 } else {
     //spawn bars
     instance_create(spawn_x, spawn_y, obj_rec)
-    spawn_int = irandom_range(room_speed/spawn_inc,room_speed * 4 /spawn_inc)
 }
+spawn_int = irandom_range(room_speed/spawn_inc,room_speed * 4 /spawn_inc)
 alarm[0] = spawn_int
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///score
+draw_set_color(c_white)
+draw_set_halign(fa_middle)
+draw_set_valign(fa_center)
+draw_set_font(fnt_eng)
+draw_text_transformed(center_x, score_height, score, fnt_sc, fnt_sc, 0)
 </string>
           </argument>
         </arguments>
