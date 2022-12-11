@@ -60,12 +60,11 @@ start = instance_create(center_x,view_yview[0]+get_hh()/2,obj_newgame)
 global.org_w = 570
 global.org_h = 800
 
-
-/*if os_type != os_browser{
+if os_type != os_browser{
     global.g_vh = view_hview[0]
     global.g_vw = view_wview[0]
     return 1
-}*/
+}
 d_w = browser_width
 d_h = browser_height
 global.org_w = global.org_w
@@ -89,28 +88,6 @@ if (browser_width != width || browser_height != height)
     height =  min(base_height, browser_height);
     scale_canvas(base_width, base_height, width, height, true);
 }
-//alarm[0] = 1
-/*
-base_width = 570
-base_height = (browser_height / browser_width) * base_width
-view_wview[0] = base_width
-view_hview[0] = base_height
-show_debug_message("H:" + string(base_height))
-show_debug_message("W:" + string(base_width))
-width = base_width;
-height = (base_height/base_width)*base_width
-if (browser_width != width || browser_height != height)
-{
-    width = min(base_width, browser_width);
-    height =  min(base_height, browser_height);
-    scale_canvas(base_width, base_height, width, height, true);
-}
-/*if os_type != os_browser{
-    global.g_vh = view_hview[0]
-    global.g_vw = view_wview[0]
-    return 1
-}*/
-//global.get_height = height
 </string>
           </argument>
         </arguments>

@@ -35,7 +35,7 @@ spawn_inc_holder = 0
 backspeed_holder = 0
 alpha = 0.2
 
-global.laserpoint = 0
+global.laserpoint = 6
 global.laserkey = false
 </string>
           </argument>
